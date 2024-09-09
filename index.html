@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>MiniStore!</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+   <section id="navbar">
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-light " aria-label="Offcanvas navbar large">
+        <div class="container-fluid mt-2 mb-2">
+          <a class="navbar-brand ps-5" href="index.html">
+            <img src="https://themewagon.github.io/MiniStore/images/main-logo.png" alt="MiniStore">
+          </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon bg-dark text-light"></span>
+          </button>
+          <div class="offcanvas offcanvas-end bg-light" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbar2Label"><img src="https://themewagon.github.io/MiniStore/images/main-logo.png" alt="MiniStore"></h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                <li class="nav-item">
+                  <a class="nav-link active text-info" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="#">Link</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="#"> Services</a>
+
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-dark" href="#">
+                    Products
+                  </a>
+
+                </li>
+                <li class="nav-item">
+                  <a  class="nav-link text-dark" href="#"> Watches</a>
+
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link text-dark">
+                    Sale
+                  </a>
+                </li>
+                <li class="nav-item">
+
+
+                  <a class="nav-link text-dark" href="#">Blog</a>
+
+                </li>
+                <li class="nav-item dropdown text-dark">
+                  <a class="nav-link dropdown-toggle text-dark" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Pages
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">About</a></li>
+                    <li><a class="dropdown-item" href="#">Blog</a></li>
+                    <li><a class="dropdown-item" href="#">Shop</a></li>
+                    <li><a class="dropdown-item" href="#">Cart</a></li>
+                    <li><a class="dropdown-item" href="#">CheckOut</a></li>
+                    <li><a class="dropdown-item" href="#">Single Post</a></li>
+                    <li><a class="dropdown-item" href="#">Single Product</a> </li>
+                    <li><a class="dropdown-item" href="#">Contact</a> </li>
+                    
+                  </ul>
+                </li>
+              </ul>
+              <Div class="userIcons">
+                <ul class="navbar-nav justify-content-end flex-grow-1 ">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#"> 
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-person-fill" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-search" viewBox="0 0 16 16">
+                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black" class="bi bi-cart-fill" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+                      </svg>
+                    </a>
+                  </li>
+
+
+                </ul>
+                
+              </Div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+    </div>
+
+   </section>
+    
+    <!--First Carasole-->
+    <section id="Carasole">
+      <div class="container-fluid">
+        <div id="Featured" class="carousel slide justify-content-center">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="https://themewagon.github.io/MiniStore/images/banner-image.png" class="d-block mx-lg-auto" alt="Bootstrap Themes" width="300" height="auto" loading="lazy">
+                  </div>
+                  <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Best in what we do.</h1>
+                    <p class="lead">Guranteed best rates compared with assured gifts</p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                      <button type="button" class="btn btn-dark btn-lg px-4 me-md-2">Shop Now</button>
+                     
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="https://i.pinimg.com/236x/1d/a7/7a/1da77a25e2147c6b908ccdfe84012bbb.jpg" class="d-block mx-lg-auto" alt="Bootstrap Themes" width="250" height="auto" loading="lazy">
+                  </div>
+                  <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Best Customer Support.</h1>
+                    <p class="lead">24*7 Global Customer Support available. </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                      <button type="button" class="btn btn-dark btn-lg px-4 me-md-2">Shop Now</button>
+                     
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="carousel-item">
+              <div class="container col-xxl-8 px-4 py-5">
+                <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+                  <div class="col-10 col-sm-8 col-lg-6">
+                    <img src="https://i.pinimg.com/236x/50/71/65/507165e6b316d33761766712f016b58b.jpg" class="d-block mx-lg-auto" alt="Bootstrap Themes" width="250" height="auto" loading="lazy">
+                  </div>
+                  <div class="col-lg-6">
+                    <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Our Products are great.</h1>
+                    <p class="lead">Shop with us to get best offer across all Apple products </p>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                      <button type="button" class="btn btn-dark btn-lg px-4 me-md-2">Shop Now</button>
+                     
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#Featured" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#Featured" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+    <br><hr>
+    <!-- Features -->
+    <section id="Features">
+      <div class="container">
+        <div class="display-header text-uppercase text-dark text-center pb-3">
+          <h2 class="display-7">Why Us?</h2>
+        </div>
+        <div class="container px-4 py-5" id="icon-grid">
+          
+      
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
+            <div class="col-lg-3 col-sm-12 d-flex align-items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="lightblue" class="bi bi-cart me-2" viewBox="0 0 16 16">
+                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2"/>
+              </svg>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Free delivery</h3>
+                <p>Free delivery across India</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12 d-flex align-items-start">
+              <div class="AwardIcon mb-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="LightBlue" class="bi bi-award me-2" viewBox="0 0 16 16">
+                  <path d="M9.669.864 8 0 6.331.864l-1.858.282-.842 1.68-1.337 1.32L2.6 6l-.306 1.854 1.337 1.32.842 1.68 1.858.282L8 12l1.669-.864 1.858-.282.842-1.68 1.337-1.32L13.4 6l.306-1.854-1.337-1.32-.842-1.68zm1.196 1.193.684 1.365 1.086 1.072L12.387 6l.248 1.506-1.086 1.072-.684 1.365-1.51.229L8 10.874l-1.355-.702-1.51-.229-.684-1.365-1.086-1.072L3.614 6l-.25-1.506 1.087-1.072.684-1.365 1.51-.229L8 1.126l1.356.702z"/>
+                  <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1z"/>
+                </svg>
+
+              </div>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Quality guarantee</h3>
+                <p>Best in the market!</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12  d-flex align-items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="LightBlue" class="bi bi-tag me-2" viewBox="0 0 16 16">
+                <path d="M6 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0m-1 0a.5.5 0 1 0-1 0 .5.5 0 0 0 1 0"/>
+                <path d="M2 1h4.586a1 1 0 0 1 .707.293l7 7a1 1 0 0 1 0 1.414l-4.586 4.586a1 1 0 0 1-1.414 0l-7-7A1 1 0 0 1 1 6.586V2a1 1 0 0 1 1-1m0 5.586 7 7L13.586 9l-7-7H2z"/>
+              </svg>
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">Daily Offers</h3>
+                <p>Check our site for daily offers and events!</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-12  d-flex align-items-start">
+              <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="LightBlue" class="bi bi-shield-check me-2" viewBox="0 0 16 16">
+                <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+                <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+              </svg>
+              
+              <div>
+                <h3 class="fw-bold mb-0 fs-4 text-body-emphasis">100% Secure Payment</h3>
+                <p>COD and Card payment available.</p>
+              </div>
+            
+          </div>
+        </div>
+      </div>
+        
+    </section>
+    <br><hr>
+    <!-- Mobile Products -->
+    <section id="MobileProduct">
+      <div class="container mt-5 ">
+        <div class="display-header text-uppercase text-dark text-center pb-3">
+          <h2 class="display-7">Our Mobile Products</h2>
+        </div>
+        <div id="MobileProducts" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active container">
+              <div class="card-group row justify-content-evenly">
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item1.jpg" class="card-img-top cardImagesMe " alt="MiniStore" >
+                  <div class="card-body">
+                    <h5 class="card-title">iPhone X</h5>
+                    <p class="card-text">Todays Price - 20000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card container justify-content-evenly">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item3.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body">
+                    <h5 class="card-title">iPhone 11</h5>
+                    <p class="card-text">Todays Price - 23000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item4.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">iPhone 11 Pro</h5>
+                    <p class="card-text">Todays Price - 28000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="data:image/jpeg;base64,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" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">iPhone 13</h5>
+                    <p class="card-text">Todays Price - 36000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="carousel-item">
+              <div class="card-group row justify-content-evenly">
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item1.jpg" class="card-img-top cardImagesMe " alt="MiniStore" >
+                  <div class="card-body">
+                    <h5 class="card-title">iPhone X</h5>
+                    <p class="card-text">Todays Price - 20000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card container justify-content-evenly">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item3.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body">
+                    <h5 class="card-title">iPhone 11</h5>
+                    <p class="card-text">Todays Price - 23000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item4.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">iPhone 11 Pro</h5>
+                    <p class="card-text">Todays Price - 28000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="data:image/jpeg;base64,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" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">iPhone 13</h5>
+                    <p class="card-text">Todays Price - 36000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="carousel-item">
+              <div class="card-group row justify-content-evenly">
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item1.jpg" class="card-img-top cardImagesMe " alt="MiniStore" >
+                  <div class="card-body">
+                    <h5 class="card-title">iPhone X</h5>
+                    <p class="card-text">Todays Price - 20000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card container justify-content-evenly">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item3.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body">
+                    <h5 class="card-title">iPhone 11</h5>
+                    <p class="card-text">Todays Price - 23000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item4.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">iPhone 11 Pro</h5>
+                    <p class="card-text">Todays Price - 28000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="data:image/jpeg;base64,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" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">iPhone 13</h5>
+                    <p class="card-text">Todays Price - 36000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+             
+              
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#MobileProducts" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#MobileProducts" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+
+      </div>
+     
+      
+        
+      
+    </section>
+    <br><hr>
+    <!-- Smart Watches -->
+    <section id="SmartWatches">
+      <div class="container mt-5">
+        <div class="display-header text-uppercase text-dark text-center pb-3">
+          <h2 class="display-7">Our Wathces</h2>
+        </div>
+        <div id="carouselWatches" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active container">
+              <div class="card-group row justify-content-evenly">
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item6.jpg" class="card-img-top cardImagesMe " alt="MiniStore" >
+                  <div class="card-body">
+                    <h5 class="card-title"> Watch Series 5</h5>
+                    <p class="card-text">Todays Price - 20000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card container justify-content-evenly">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item7.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body">
+                    <h5 class="card-title">Watch Series 6</h5>
+                    <p class="card-text">Todays Price - 23000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item8.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">Watch Series 7</h5>
+                    <p class="card-text">Todays Price - 28000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item9.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">Watch Series 8</h5>
+                    <p class="card-text">Todays Price - 36000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="carousel-item">
+              <div class="card-group row justify-content-evenly">
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item6.jpg" class="card-img-top cardImagesMe " alt="MiniStore" >
+                  <div class="card-body">
+                    <h5 class="card-title"> Watch Series 5</h5>
+                    <p class="card-text">Todays Price - 20000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card container justify-content-evenly">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item7.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body">
+                    <h5 class="card-title">Watch Series 6</h5>
+                    <p class="card-text">Todays Price - 23000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item8.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">Watch Series 7</h5>
+                    <p class="card-text">Todays Price - 28000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item9.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">Watch Series 8</h5>
+                    <p class="card-text">Todays Price - 36000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="carousel-item">
+              <div class="card-group row justify-content-evenly">
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item6.jpg" class="card-img-top cardImagesMe " alt="MiniStore" >
+                  <div class="card-body">
+                    <h5 class="card-title"> Watch Series 5</h5>
+                    <p class="card-text">Todays Price - 20000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card container justify-content-evenly">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item7.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body">
+                    <h5 class="card-title">Watch Series 6</h5>
+                    <p class="card-text">Todays Price - 23000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item8.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">Watch Series 7</h5>
+                    <p class="card-text">Todays Price - 28000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+                <div class="card">
+                  <img src="https://themewagon.github.io/MiniStore/images/product-item9.jpg" class="card-img-top cardImagesMe" alt="MiniStore">
+                  <div class="card-body CardHero">
+                    <h5 class="card-title">Watch Series 8</h5>
+                    <p class="card-text">Todays Price - 36000₹</p>
+                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                  </div>
+                </div>
+              </div>
+             
+              
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselWatches" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselWatches" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+    </section>
+    <br><hr>
+    <!-- New Year Sale -->
+    <section id="yearly-sale" class=" container-xxl overflow-hidden mt-5 padding-xlarge" style="background-image: url('https://themewagon.github.io/MiniStore/images/single-image1.png');background-position: right; background-repeat: no-repeat;">
+      <div class="container ">
+      <div class="row d-flex flex-wrap align-items-center">
+        <div class="col-md-6 col-sm-12">
+          <div class="text-content offset-4 padding-medium">
+            <h3>10% off</h3>
+            <h2 class="display-2 pb-5 text-uppercase text-dark">New year sale</h2>
+            <a href="shop.html" class="btn btn-medium btn-dark text-uppercase btn-rounded-none">Shop Sale</a>
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          
+        </div>
+      </div>
+    </section>
+
+
+      </div>
+
+    </section>
+    <br><hr>
+    <!-- Latest post -->
+    <section id="LatestPost" class=" padding-xlarge">
+      <div class="container">
+      <div class="display-header d-flex justify-content-around pb-3 container">
+        <h2 class="display-7 text-dark text-uppercase">Latest Posts</h2>
+        <div class="btn-right">
+          <a href="blog.html" class="btn btn-medium btn-normal text-uppercase">Read Blog</a>
+        </div>
+      </div>
+      <div class="container d-flex justify-content-around">
+        
+        <div class="row justify-content-center row-cols-1 row-cols-md-3 ">
+          <div class="col-lg-4 col-sm-12 ">
+            <div class="card h-100">
+              <img src="https://themewagon.github.io/MiniStore/images/post-item1.jpg" class="card-img-top LatestPost " alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Aug 23, 2024 - Gadgets</h5>
+                <p class="card-text">Get some cool gadgets in 2024.</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 ">
+            <div class="card h-100">
+              <img src="https://themewagon.github.io/MiniStore/images/post-item2.jpg" class="card-img-top LatestPost" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"> Aug 23, 2024</h5> <span class="text-end">           - Technology</span>
+                <p class="card-text"> Technology Hack You Won't Get</p>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12 ">
+            <div class="card h-100">
+              <img src="https://themewagon.github.io/MiniStore/images/post-item3.jpg" class="card-img-top LatestPost" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Aug 23, 2024</h5>
+                <p class="card-text">Top 10 Small Camera In The World.</p>
+              </div>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+    <br><hr>
+    <!-- Reviews -->
+
+    <section id="Review">
+      <div class="container">
+      
+        <div id="Reviews" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="px-4 py-5 my-5 text-center">
+                <img class="d-block mx-auto mb-4" src="Images/16231558095-star-rating.svg" alt="" width="100" height="57">
+                <h1 class="display-5 fw-bold text-body-emphasis">Emma Chamberlin</h1>
+                <div class="col-lg-6 mx-auto">
+                  <p class="lead mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Saepe officia illo fugiat id. Fuga nam rerum impedit eius facere quisquam labore veritatis doloribus quibusdam harum, minima officia numquam velit consectetur?</p>
+                  
+                </div>
+              </div>
+              
+            </div>
+            <div class="carousel-item">
+              <div class="px-4 py-5 my-5 text-center">
+                <img class="d-block mx-auto mb-4" src="Images/16231558095-star-rating.svg" alt="" width="100" height="57">
+                <h1 class="display-5 fw-bold text-body-emphasis">Jennie Rose</h1>
+                <div class="col-lg-6 mx-auto">
+                  <p class="lead mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur, at unde dicta earum repudiandae reprehenderit itaque quae voluptatum quam laboriosam suscipit! Architecto, perspiciatis saepe ducimus.</p>
+                  
+                </div>
+              </div>
+              
+            </div>
+            
+              
+              
+            
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#Reviews" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#Reviews" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div> 
+
+        
+        
+      
+    </section>
+    <br><hr>
+    <!-- Newletter -->
+    <section id="Newletter">
+      <div class="container ">
+        <div class="row">
+          <div class="subscribe-now pt-5 pb-5 ps-5 pe-5 bg-dark d-flex flex-wrap justify-content-center align-items-center col-lg-12 col-sm-12">
+            <div class="display-header pe-3 col-lg-6 col-sm-12">
+              <h2 class="display-7 text-light text-uppercase text-center">SUBSCRIBE NOW </h2>
+              <P class="text-light">Get latest news, updates and deals directly mailed to your inbox.</P>
+
+            </div>
+            <div class=" col-lg-6 col-sm-12 subscription-form-col">
+              <form action="" class="subscription-form validate bg-light">
+                <div class="input-group flex-wrap">
+                  <input type="email" name="EMAIL" class="form-control btn text-light" placeholder="Enter your email here" required="">
+                  <button class="btn btn-primary text-uppercase input-form-btn" type="submit" name="subscribe">SUBSCRIBE</button>
+  
+                </div>
+              </form>
+  
+            </div>
+          </div>
+          
+            
+
+
+        </div>
+
+      </div>
+        
+
+         
+
+
+      
+    </section>
+    <br><hr>
+    <!-- Insta shop -->
+    <section id="InstaShop">
+      <div class="container d-flex justify-content-center align-items-center justify-content-evenly">
+        <div class="row me-2 ms-2 justify-content-center align-items-center justify-content-evenly">
+          <div class="display-header text-uppercase text-dark text-center pb-3">
+            <h2 class="display-7">Shop Our Insta</h2>
+          </div>
+          <div class="instaShop col-lg-3 col-md-12  justify-content-around">
+            <img src="https://themewagon.github.io/MiniStore/images/insta-item1.jpg" class="img-thumbnail" alt="...">
+          </div>
+          <div class="instaShop col-lg-3 col-md-12  justify-content-around">
+            <img src="https://themewagon.github.io/MiniStore/images/insta-item2.jpg" class="img-thumbnail" alt="..." >
+          </div>
+          <div class="instaShop col-lg-3 col-md-12  justify-content-around">
+            <img src="https://themewagon.github.io/MiniStore/images/insta-item3.jpg" class="img-thumbnail" alt="..." >
+          </div>
+          <div class="instaShop col-lg-3 col-md-12 justify-content-around">
+            <img src="https://themewagon.github.io/MiniStore/images/insta-item4.jpg" class="img-thumbnail" alt="..." >
+          </div>
+            
+
+          
+          
+        </div>
+      </div>
+
+    </section>
+    <br><hr>
+    <!-- Footer1 -->
+    <section id="Footer1">
+      <div class="container">
+        <div class="row">
+          <div class="footer-top-area">
+            <div class="row d-flex flex-wrap justify-content-between ">
+              <div class="col-lg-3 col-sm-6 pb-3">
+                <div class="footer-menu">
+                  <img src="images/main-logo.png" alt="logo">
+                  <p>Your One Stop Shop for all your Mobile needs!</p>
+                  <div class="social-links">
+                    <ul class="d-flex list-unstyled padding">
+                      <li>
+                        <a href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="black" class="bi bi-facebook ms-3" viewBox="0 0 16 16">
+                            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="Black" class="bi bi-instagram ms-3" viewBox="0 0 16 16">
+                            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="black" class="bi bi-twitter-x ms-3" viewBox="0 0 16 16">
+                            <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="black" class="bi bi-linkedin ms-3" viewBox="0 0 16 16">
+                            <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+                          </svg>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" fill="Black" class="bi bi-youtube ms-3 mt-1" viewBox="0 0 16 16">
+                            <path d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z"/>
+                          </svg>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-2 col-sm-6 pb-3">
+                <div class="footer-menu text-uppercase">
+                  <h5 class="widget-title pb-2">Quick Links</h5>
+                  <ul class="menu-list list-unstyled text-uppercase">
+                    <li class="menu-item pb-2">
+                      <a  class="text-dark" href="#">Home</a>
+                    </li>
+                    <li class="menu-item pb-2">
+                      <a class="text-dark" href="#">About</a>
+                    </li>
+                    <li class="menu-item pb-2">
+                      <a class="text-dark" href="#">Shop</a>
+                    </li>
+                    <li class="menu-item pb-2">
+                      <a class="text-dark" href="#">Blogs</a>
+                    </li>
+                    <li class="text-dark" class="menu-item pb-2">
+                      <a class="text-dark" href="#">Contact</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 pb-3">
+                <div class="footer-menu text-uppercase">
+                  <h5 class="widget-title pb-2">Help &amp; Info Help</h5>
+                  <ul class="menu-list list-unstyled">
+                    <li class="menu-item pb-2">
+                      <a href="#">Track Your Order</a>
+                    </li>
+                    <li class="menu-item pb-2">
+                      <a href="#">Returns Policies</a>
+                    </li>
+                    <li class="menu-item pb-2">
+                      <a href="#">Shipping + Delivery</a>
+                    </li>
+                    <li class="menu-item pb-2">
+                      <a href="#">Contact Us</a>
+                    </li>
+                    <li class="menu-item pb-2">
+                      <a href="#">Faqs</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-lg-3 col-sm-6 pb-3">
+                <div class="footer-menu contact-item">
+                  <h5 class="widget-title text-uppercase pb-2">Contact Us</h5>
+                  <p>Do you have any queries or suggestions? <a href="mailto:">MiniStore@gmail.com</a>
+                  </p>
+                  <p>If you need support? Just give us a call. <a href="">+91 111 222 333 44</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <br><hr>
+    <!-- Footer2 -->
+    <section id="Footer2">
+      <div class="container">
+        <div class="row d-flex flex-wrap justify-content-between">
+          <div class="col-md-4 col-sm-6">
+            <div class="Shipping d-flex">
+              <p>We ship with:</p>
+              <div class="card-wrap ps-2">
+                <img src="https://themewagon.github.io/MiniStore/images/dhl.png" alt="visa">
+                <img src="https://themewagon.github.io/MiniStore/images/shippingcard.png" alt="mastercard">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="payment-method d-flex">
+              <p>Payment options:</p>
+              <div class="card-wrap ps-2">
+                <img src="https://themewagon.github.io/MiniStore/images/visa.jpg" alt="visa">
+                <img src="https://themewagon.github.io/MiniStore/images/mastercard.jpg" alt="mastercard">
+                <img src="https://themewagon.github.io/MiniStore/images/paypal.jpg" alt="paypal">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6">
+            <div class="copyright">
+              <p>© Copyright 2023 MiniStore. Design by <a href="https://templatesjungle.com/">Tushar Malik</a> Distribution by <a href="https://themewagon.com">Advanced Tech <Label></Label></a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

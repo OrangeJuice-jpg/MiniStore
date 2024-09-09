@@ -1,0 +1,65 @@
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .card {
+    margin: 0 0.5em;
+    align-items: center;
+    border: white solid 2px;
+    border-radius: 5px 5px 5px 5px;
+    max-width: 16rem;
+    overflow: hidden;
+  }
+  .card-img-top:hover{
+    box-shadow: 0 0 3px #515151;
+    scale: 1.15;
+  }
+
+  .carousel-inner {
+    padding: 5px;
+  }
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: #e1e1e1;
+    width: 5vh;
+    height: 5vh;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @media (min-width: 768px) {
+    .card img {
+      height: 15em;
+    }
+  }
+  .card-img-top {
+    width: 10rem;
+    height: 15rem;
+    object-fit: cover;
+    transition:  all  1s ease-in-out;
+    
+    
+}
+.NewYearSale{
+  background-color: grey;
+  background-image: url(https://themewagon.github.io/MiniStore/images/single-image1.png);
+  object-fit: cover;
+}
+.LatestPost{
+  width: 20rem;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+.subscription-form{
+  border-radius: 6px;
+  width: 600px;
+  
+}
+.input-form-btn{
+  opacity: 50%;
+  
+}
